@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+@*<body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Shaw Media", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Shaw Media</p>
+            </footer>
+        </div>
+
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+<body class="pg-pages pg-landing_pages pg-all_shows" style="background-color: #;">
+    <div id="androidSmartBanner" class="hidden">
+        <span class="closeBanner">&times;</span>
+        <span class="appDescription">
+            <strong>Global Go</strong><br />
+            <i>Shaw Media</i><br />
+            Free
+        </span>
+        <a class="openApp" target="blank" href="https://play.google.com/store/apps/details?id=com.shawmedia.smglobal&hl=en">View</a>
+    </div>
+    <header class="siteHeader">
+        <div id="header-wrapper">
+            <div id="header-top-ad">
+                <div id="ad-Ad970x90_1" class="gpt-extraLarge bp-extraLarge js-gptAd"></div>
+                <div id="ad-Ad728x90_1" class="gpt-medium bp-medium js-gptAd"></div>
+                <div id="ad-Ad320x50_1" class="gpt-small bp-small js-gptAd"></div>
+            </div>
+            <a class="globaltvLogo" title="GlobalTV" href='http://www.globaltv.com/'>GlobalTV</a>
+
+            <nav role="navigation" class="navbar">
+                <div class="navbar-header">
+                    <button data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand">Menu</span>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <section class="search">
+                        <form action="" id="js-searchForm">
+                            <input type="search" class="navbar-searchField" id="js-searchField" name="q">
+                            <input type="submit" class="navbar-searchBtn boxshadow" id="js-searchButton" value="">
+                        </form>
+                    </section>
+                    <ul class="navigation navigation--primary">
+                        <li class="navigation-item"><a href='http://www.globaltv.com/shows/' class="navigation-itemLink">Shows</a></li>
+                        <li class="navigation-item"><a href='http://www.globaltv.com/video/' class="navigation-itemLink">Full episodes</a></li>
+                        <li class="navigation-item"><a href='http://www.globaltv.com/watchlive/' class="navigation-itemLink">Live TV</a></li>
+                        <li class="navigation-item"><a href='http://www.globaltv.com/schedule/' class="navigation-itemLink">Schedule</a></li>
+                    </ul>
+                    <div class="headerFeaturesBar">
+                        <ul class="headerFeatures">
+                            <li class="headerFeatures-item headerFeatures-title">FEATURED</li>
+                            <li class="headerFeatures-item"><a href='http://www.globaltv.com/shadesofblue/' target='' class="headerFeatures-itemLink">Shades of Blue</a></li>
+                            <li class="headerFeatures-item"><a href='http://www.globaltv.com/holidays/video/' target='' class="headerFeatures-itemLink">Watch holiday movies</a></li>
+                            <li class="headerFeatures-item"><a href='http://www.globaltv.com/supergirl/latest/tornado-chasers-supergirl-episode-6-recap/?dg' target='' class="headerFeatures-itemLink">Supergirl recap: Tornado chasers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="main" class="pageContent">
+        <section id="highPriorityZone" class="zonePriority--high"></section>
+        @RenderBody()
+    </div>
+    @RenderSection("scripts", required: false)
+
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Shaw Media</p>
+    </footer>
+
+</body>
+</html>

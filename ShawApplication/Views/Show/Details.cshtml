@@ -1,0 +1,53 @@
+﻿@model  ShawApplication.API.Models.Show
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<table align="center" border="1" width="70%" >
+    <tr>
+        <td colspan="2">
+            <h2 color="honeydew">Show</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+            @Html.DisplayNameFor(model => model.Id)
+
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Id)
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+            @Html.DisplayNameFor(model => model.Name)
+        </td>
+        <td>
+
+
+            @Html.DisplayFor(model => model.Name)
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+
+            @Html.DisplayNameFor(model => model.Description)
+
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Description)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to List", "Index")
+            </p>
+        </td>
+    </tr>
+</table>

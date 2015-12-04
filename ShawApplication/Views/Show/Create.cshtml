@@ -1,0 +1,168 @@
+﻿@model  ShawApplication.API.Models.Show
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<link rel="Stylesheet" type="text/css" href="/uploadify/uploadify.css" />
+<script type="text/javascript" src="/uploadify/JavaScript/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="/uploadify/javascript/jquery.uploadify(Source).js"></script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <table align="center" width="70%">
+        <tr>
+            <td>
+                <legend>Show</legend>
+
+                @Html.HiddenFor(model => model.Id)
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <br />
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Description)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Description)
+
+                </div>
+
+                <br />
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.ImageLink)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.ImageLink)
+
+                </div>
+                <br />
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.VisitShowPageUrl)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.VisitShowPageUrl, new { @class = "txtWidth" })
+
+                </div>
+                <br />
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.WatchVideoUrl)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.WatchVideoUrl)
+
+                </div>
+                <br />
+
+                <div class="editor-field">
+                    <input type="hidden" size="200" name="files" id="files" />
+                    <input id="myFileUpload" name="myFileUpload" type="button" />
+                </div>
+                <p>
+
+                    <input id="submit" type="submit" value="Create" />
+                </p>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Back to List", "Index")
+            </td>
+        </tr>
+    </table>
+}
+
+<script type="text/javascript">
+
+    var files = [];
+    Array.prototype.removeByValue = function (val) {
+        for (var i = 0; i < this.length; i++) {
+            if (this[i] == val) {
+                this.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    function uploadSelect(event, queueID, fileObj) {
+        var type = fileObj.type.toLowerCase();
+        if (!isValidFile(type)) {
+            alert('Please upload a JPG, GIF, or PNG file.');
+            $("#MyfileUpload").fileUploadCancel(queueID);
+            event.stopPropogation();
+        } else {
+            if (fileObj.name != '') {
+                files.push(fileObj.name);
+            }
+        }
+        $("#files").val(files.join());
+    }
+    var hash = { ".jpg": 1, ".gif": 1, ".png": 1, ".bmp": 1 }
+    function isValidFile(extesion) {
+        if (hash[extesion])
+            return true;
+        else
+            return false;
+    }
+
+    function uploadError(event, queueID, fileObj, errorObj) {
+        if (errorObj.status == 404) alert('Could not find upload script.');
+        else if (errorObj.type === "HTTP") alert('HTTP error ' + errorObj.type + ": " + errorObj.status);
+        else if (errorObj.type === "FileSize") alert(errorObj.type + ' ' + errorObj.sizeLimit)
+        else alert('other error ' + errorObj.type + ": " + errorObj.text);
+    }
+
+
+    function cancel(event, queueID, fileObj, data) {
+        files.removeByValue(fileObj.name);
+        $("#files").val(files.join());
+    }
+
+
+    $(function () {
+
+        $("#files").val('');
+        files = [];
+        $("#myFileUpload").fileUpload({
+            'RemoveErrorItems': true,
+            'uploader': '/uploadify/uploader.swf',
+            'buttonImg': '/uploadify/browse.png',
+            'cancelImg': '/uploadify/cancel.png',
+            'folder': '/ShowImages',
+            'script': '/Show/SetFileUpload',
+            'fileExt': '*.bmp;*.jpg;*.gif;*.png;',
+            'fileDesc': 'Image(Files)',
+
+            'queueSizeLimit': 10,
+            'simUploadLimit': 100,
+            'sizeLimit': 10049000,
+            //  'scriptData': {},
+            'auto': true,
+            'multi': false,
+            'width': 100,
+            'height': 22,
+            'onSelect': uploadSelect,
+            'onError': uploadError,
+            'onCancel': cancel
+        });
+    }
+  );
+
+</script>
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+﻿
+@model  ShawApplication.API.Models.Show
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<style>
+    input {
+        width: 150px;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <table align="center" width="70%">
+        <tr>
+            <td>
+                <legend>Show</legend>
+
+                @Html.HiddenFor(model => model.Id)
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+                <br />
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Description)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Description)
+
+                </div>
+
+                <br />
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.ImageLink)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.ImageLink)
+
+                </div>
+                <br />
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.ImageUrl)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.ImageUrl)
+
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.VisitShowPageUrl)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.VisitShowPageUrl, new { @class = "txtWidth" })
+
+                </div>
+                <br />
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.WatchVideoUrl)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.WatchVideoUrl)
+
+                </div>
+                <br />
+                <div class="editor-label">
+                    image:
+                </div>
+                <div class="editor-field">
+                    <img src="@Model.ImageUrl" width="300" />
+                </div>
+                <br />
+                <div>
+                    <input type="button" id="EditApi" value="Update(Json,Api)" />
+                    @*<input type="submit" value="Update" />*@
+                </div>
+
+                <br />
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            </td>
+        </tr>
+    </table>
+}
+
+
+<script>
+    $(document).ready(function () {
+        $("#EditApi").click(function () {
+            var id = $("#Id").val();
+            var name = $("#Name").val();
+            var description = $("#Description").val();
+            //alert(id + ' ' + name + ' ' + description);
+            $.ajax({
+                url: "http://localhost:64015/api/Services",
+                type: "Put",
+                //data: JSON.stringify(show),
+                data: JSON.stringify([id,name, description ]),
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    alert('Updated Successfully');
+                    window.location.href = "../Index";
+                },
+                error: function (msg) { alert(msg); }
+            });
+        });
+    });
+</script>
+

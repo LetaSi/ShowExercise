@@ -1,0 +1,1089 @@
+@font-face {
+	font-family: videodrome;
+	src: url(fonts/videodrome.eot?#iefix-l8dd98) format("embedded-opentype"), url(fonts/videodrome.woff?-l8dd98) format("woff"), url(fonts/videodrome.ttf?-l8dd98) format("truetype"), url(fonts/videodrome.svg?-l8dd98#videodrome) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.shawVideo_border-box {
+	box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.shawVideo_border-box * {
+	box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.shawVideo_border-box *::after {
+	box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.shawVideo_border-box *::before {
+	box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+[class^='shawVideoIcon-'] {
+	text-transform: none; line-height: 1; font-family: "videodrome"; font-style: normal; font-variant: normal; font-weight: normal; speak: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1); ext-shadow: #fff 0px 1px 1px;
+}
+[class*=' shawVideoIcon-'] {
+	text-transform: none; line-height: 1; font-family: "videodrome"; font-style: normal; font-variant: normal; font-weight: normal; speak: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1); ext-shadow: #fff 0px 1px 1px;
+}
+.shawVideoIcon-twitter_icon::before {
+	content: "\e603";
+}
+.shawVideoIcon-google_icon::before {
+	content: "\e604";
+}
+.shawVideoIcon-facebook_icon::before {
+	content: "\e605";
+}
+.shawVideoIcon-email_icon::before {
+	content: "\e606";
+}
+.shawVideoIcon-dropup_arrow::before {
+	content: "\e609";
+}
+.expand#shawVideo_metaExpand::before {
+	content: "\e609";
+}
+.shawVideoIcon-dropdown_arrow::before {
+	content: "\e602";
+}
+.shawVideo_dropDown::before {
+	content: "\e602";
+}
+#shawVideo_metaExpand::before {
+	content: "\e602";
+}
+.shawVideoIcon-lock_icon::before {
+	content: "\e608";
+}
+.shawVideo_RestrictedContent.shawVideo_ThumbnailLink::after {
+	content: "\e608";
+}
+.shawVideoIcon-play_btn::before {
+	content: "\e607";
+}
+.shawVideo_ThumbnailLink::after {
+	content: "\e607";
+}
+.shawVideoIcon-chevron_right::before {
+	content: "\e601";
+}
+.shawVideoIcon-chevron_left::before {
+	content: "\e600";
+}
+.shawVideo_dropDown::before {
+	background: rgb(145, 145, 145);
+}
+.shawVideo_dropDown {
+	background: rgb(239, 237, 238); overflow: hidden; margin-bottom: 1em; display: block; position: relative;
+}
+.shawVideo_dropDown::before {
+	padding: 8px; height: 100%; right: 0px; line-height: 1; font-family: videodrome; display: block; position: absolute;
+}
+.shawVideo_dropDown select {
+	background: none; margin: 0px; padding: 3px 0px 2px 5px; border: 0px currentColor !important; border-image: none !important; width: 111%; text-transform: capitalize; text-indent: 0.01px; font-size: 1.2em; position: relative; z-index: 2; -moz-appearance: none; -webkit-appearance: none; appearance: none;
+}
+.shawVideo_dropDown select::-ms-expand {
+	display: none;
+}
+.shawVideo_ThumbnailLink::after {
+	padding: 1.3em; transition:padding-right 0.3s, background 0.3s; right: 0px; bottom: 0px; color: rgb(255, 255, 255); font-family: videodrome; font-size: 0.8em; font-weight: normal; position: absolute;
+}
+.shawVideo_RestrictedContent.shawVideo_ThumbnailLink::after {
+	font-weight: normal;
+}
+.shawVideo_RestrictedContent.shawVideo_ThumbnailLink {
+	overflow: hidden;
+}
+body:not(.shawVideo_touch) .shawVideo_RestrictedContent.shawVideo_ThumbnailLink:hover::after {
+	transition:padding-right 0.3s 0.3s, background 0.3s 0.3s; padding-right: 105px;
+}
+body:not(.shawVideo_touch) :not(.shawVideo_nowPlaying).shawVideo_drawerItem .shawVideo_RestrictedContent.shawVideo_ThumbnailLink::before {
+	padding: 1.46em 0px; transition:color 0s 0.3s; right: 5px; bottom: -2px; position: absolute; z-index: 3; content: "Sign in to watch"; opacity: 0;
+}
+body:not(.shawVideo_touch) :not(.shawVideo_nowPlaying).shawVideo_drawerItem .shawVideo_RestrictedContent.shawVideo_ThumbnailLink:hover::before {
+	transition:color 0.3s 0.3s, opacity 0.3s 0.3s; color: rgb(255, 255, 255); display: block; opacity: 1;
+}
+body .shawVideo_nowPlaying.shawVideo_drawerItem .shawVideo_ThumbnailLink::after {
+	padding: 0.6em; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1; font-size: 1em; position: absolute; content: "now playing";
+}
+body.shawVideo_noFlash [data-html5status='true'].shawVideo_nowPlaying .shawVideo_ThumbnailLink::after {
+	padding: 0.6em; color: rgb(255, 255, 255); text-transform: uppercase; line-height: 1; font-size: 1em; position: absolute; content: "now playing";
+}
+body.shawVideo_noFlash .shawVideo_nowPlaying.shawVideo_drawerItem .shawVideo_ThumbnailLink::after {
+	font-family: videodrome;
+}
+body.shawVideo_html5 [data-html5status='false'].shawVideo_nowPlaying .shawVideo_ThumbnailLink::after {
+	font-family: videodrome;
+}
+.shawVideo_modalContainer {
+	background: rgba(0, 0, 0, 0.6); left: 0px; top: 0px; right: 0px; bottom: 0px; display: none; position: fixed; z-index: 1350;
+}
+.shawVideo_modalContent {
+	background: 0px 0px rgb(254, 254, 254); margin: 5% auto 0px; padding: 5%; border-radius: 5px; border: 1px solid rgb(51, 51, 51); border-image: none; width: 75%; position: relative; max-width: 500px;
+}
+.shawVideo_modalContent * {
+	color: rgb(0, 0, 0);
+}
+.shawVideo_modalContent .shawVideo_modalTitle {
+	margin-top: 0px;
+}
+.shawVideo_modalContent .shawVideo_surveyLink {
+	color: inherit !important; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.shawVideo_modalContent .shawVideo_surveyLink:hover {
+	color: inherit !important; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.shawVideo_modalContent .shawVideo_modalBtn {
+	margin: 1.25em auto 0px; width: 75%; display: block;
+}
+.shawVideo_modalContent .shawVideo_modalClose {
+	top: 1%; right: 2.5%; font-size: 1.5em; font-weight: bold; position: absolute; cursor: pointer;
+}
+.shawVideo_videoList {
+	margin: 0px auto; width: 100%; letter-spacing: -0.5px; max-width: 1200px;
+}
+.shawVideo_loading {
+	margin: 0px auto; width: auto; display: block;
+}
+.shawVideo_cb_title {
+	text-transform: uppercase; font-size: 1.9em; text-decoration: none; margin-bottom: 0.4em; display: inline-block;
+}
+.shawVideo_videoList {
+	clear: both;
+}
+.shawVideo_videoList::before {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_videoList::after {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_videoList::after {
+	clear: both;
+}
+@media all and (max-width:37.5em) and (min-width:25em)
+{
+.shawVideo_videoList :nth-of-type(2n+3).shawVideo_videoItem {
+	clear: left;
+}
+}
+@media all and (max-width:56.1em) and (min-width:37.5em)
+{
+.shawVideo_videoList :nth-of-type(3n+4).shawVideo_videoItem {
+	clear: left;
+}
+}
+@media all and (min-width:56.1em)
+{
+.shawVideo_videoList :nth-child(4n+1).shawVideo_videoItem {
+	clear: left;
+}
+}
+.shawVideo_ie8 .shawVideo_videoList :nth-child(4n+1).shawVideo_videoItem {
+	clear: left;
+}
+.shawVideo_videoItem {
+	margin: 1em 0px; width: 100%; opacity: 0;
+}
+.shawVideo_videoItem a {
+	display: block;
+}
+@media all and (min-width:25em)
+{
+.shawVideo_videoItem {
+	width: 50%; padding-right: 2%; float: left;
+}
+}
+@media all and (min-width:37.5em)
+{
+.shawVideo_videoItem {
+	width: 33%;
+}
+}
+@media all and (min-width:56.1em)
+{
+.shawVideo_videoItem {
+	margin: 0px 0px 45px; width: 25%; padding-right: 1.5%; float: left; max-width: 285px;
+}
+.shawVideo_nth-child-4nP1.shawVideo_videoItem {
+	clear: left;
+}
+}
+.shawVideo_ie8 .shawVideo_videoItem {
+	margin: 0px 0px 45px; width: 25%; padding-right: 1.5%; float: left; max-width: 285px;
+}
+.shawVideo_ie8 .shawVideo_nth-child-4nP1.shawVideo_videoItem {
+	clear: left;
+}
+.fadeIn.shawVideo_videoItem {
+	transition:opacity 1s ease-out; opacity: 1;
+}
+.shawVideo_videoItem .shawVideo_ThumbnailLink {
+	width: 100%; line-height: 0; margin-bottom: 0.5em; position: relative;
+}
+.shawVideo_videoThumb_error.shawVideo_videoItem .shawVideo_videoThumbLink {
+	background: rgb(255, 255, 255); overflow: hidden;
+}
+.shawVideo_videoItem .shawVideo_videoThumb {
+	border: currentColor; border-image: none; width: 100%; height: auto; max-width: 285px;
+}
+.shawVideo_videoItem .shawVideo_showName {
+	line-height: 1em; font-size: 1.5em; margin-bottom: 0.2em;
+}
+.shawVideo_videoItem .shawVideo_seasonNumber {
+	margin: 0px 5px 0px 0px; padding: 0px; letter-spacing: 0px; float: left;
+}
+.shawVideo_videoItem .shawVideo_episodeNumber {
+	margin: 0px 5px 0px 0px; padding: 0px; letter-spacing: 0px; float: left;
+}
+.shawVideo_videoItem .shawVideo_episodeName a {
+	line-height: 1em; font-size: 1.5em; text-decoration: none; margin-bottom: 0.15em; display: block;
+}
+.shawVideo_videoItem .shawVideo_duration {
+	margin: 0px; padding: 0px; line-height: 1.2em; letter-spacing: 0px; clear: left; font-size: 1em; display: block;
+}
+.shawVideo_videoItem .shawVideo_airDate {
+	margin: 0px; padding: 0px; line-height: 1.2em; letter-spacing: 0px; clear: left; font-size: 1em; display: block;
+}
+.shawVideo_videoItem .shawVideo_duration::after {
+	content: " mins.";
+}
+.shawVideo_videoItem .shawVideo_airDate::before {
+	content: "Aired ";
+}
+.shawVideo_placeholder.shawVideo_videoItem {
+	opacity: 1;
+}
+.shawVideo_placeholder.shawVideo_videoItem .shawVideo_videoThumb {
+	background: rgb(255, 255, 255); padding-bottom: 56%; position: relative;
+}
+.shawVideo_placeholder.shawVideo_videoItem .shawVideo_placeholder_title {
+	margin: 0.6em 0px 0.85em; border: 0.55em solid rgb(255, 255, 255); border-image: none; width: 90%;
+}
+.shawVideo_placeholder.shawVideo_videoItem .shawVideo_placeholder_text {
+	margin: 0.4em 0px 0px; border: 0.4em solid rgb(255, 255, 255); border-image: none; width: 70%;
+}
+.shawVideo_showPage .shawVideo_showName {
+	display: none;
+}
+.shawVideo_pagination {
+	margin: 10px auto 0px; padding: 0.2em; border: 1px solid rgb(226, 226, 226); border-image: none; width: 100%; text-align: center; text-transform: uppercase; clear: left; font-size: 1.1em; max-width: 1200px;
+}
+@media all and (min-width:37.5em)
+{
+.shawVideo_pagination {
+	font-size: 1.5em;
+}
+}
+.shawVideo_pagination a {
+	padding: 0.5em; color: rgb(0, 0, 0); text-decoration: none;
+}
+.shawVideo_pagination a.disabled {
+	cursor: default; opacity: 0.2;
+}
+.shawVideo_pagination .shawVideo_prev::before {
+	padding: 0.2em; font-size: 1.5em; content: "\00ab";
+}
+.shawVideo_pagination .shawVideo_next::after {
+	padding: 0.2em; font-size: 1.5em; content: "\00bb";
+}
+.shawVideo_sort {
+	float: right;
+}
+.shawVideo_sort::before {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_sort::after {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_sort::after {
+	clear: both;
+}
+.shawVideo_sort > a {
+	display: block;
+}
+.shawVideo_sort > a.shawVideo_selectedSort {
+	font-weight: bold;
+}
+.shawVideo_drawer {
+	-ms-user-select: none; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; user-select: none;
+}
+.shawVideo_drawer_header_row {
+	-ms-user-select: none; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; user-select: none;
+}
+.shawVideo_drawer_title {
+	line-height: 1em; font-size: 1.5em; text-decoration: none; margin-bottom: 0.4em; display: inline-block; position: relative;
+}
+@media all and (min-width:35em)
+{
+.shawVideo_drawer_title {
+	line-height: 1.23em; font-size: 1.9em;
+}
+}
+.shawVideo_ie8 .shawVideo_drawer_title {
+	line-height: 1.23em; font-size: 1.9em;
+}
+[href].shawVideo_drawer_title::after {
+	color: rgb(187, 10, 12); line-height: 0.8em; margin-left: 0.2em; vertical-align: top; content: "\bb";
+}
+@media all and (min-width:35em)
+{
+[href].shawVideo_drawer_title::after {
+	line-height: 1.1em;
+}
+}
+.shawVideo_ie8 [href].shawVideo_drawer_title::after {
+	line-height: 1.1em;
+}
+.shawVideo_drawerSeasonPicker {
+	width: 9em; position: relative;
+}
+@media all and (min-width:35em)
+{
+.shawVideo_drawerSeasonPicker {
+	margin-left: 0.5em; float: right;
+}
+}
+.shawVideo_ie8 .shawVideo_drawerSeasonPicker {
+	margin-left: 0.5em; float: right;
+}
+.shawVideo_drawerSponsor {
+	display: block; position: relative;
+}
+.shawVideo_drawerSponsor .shawVideo_drawerSponsorImg {
+	max-width: 8em;
+}
+.shawVideo_drawerSponsor .shawvideo_drawerSponsorText {
+	padding: 0.5em; font-size: 0.9em; float: left; display: block;
+}
+@media all and (min-width:35em)
+{
+.shawVideo_drawerSponsor {
+	float: right; position: relative;
+}
+}
+.shawVideo_ie8 .shawVideo_drawerSponsor {
+	float: right; position: relative;
+}
+.shawVideo_drawer {
+	margin: 0px auto; width: 100%; letter-spacing: -0.5px; position: relative; max-width: 1200px;
+}
+.shawVideo_drawer_header_row {
+	margin: 0px auto; width: 100%; letter-spacing: -0.5px; position: relative; max-width: 1200px;
+}
+.shawVideo_drawer::before {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_drawer::after {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_drawer_header_row::before {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_drawer_header_row::after {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_drawer::after {
+	clear: both;
+}
+.shawVideo_drawer_header_row::after {
+	clear: both;
+}
+.shawVideo_drawer .shawVideo_drawer_filter {
+	float: right;
+}
+.shawVideo_drawer .shawVideo_drawer_filterType {
+	padding: 0.2em 0.7em; border: 1px solid rgb(0, 0, 0); border-image: none; color: rgb(0, 0, 0); text-transform: uppercase; font-size: 0.8em; text-decoration: none; margin-right: -1px; float: left;
+}
+.shawVideo_drawer .shawVideo_drawer_btn {
+	padding: 0.1em; transition:opacity 0.5s; top: 1.3em; font-size: 2em; position: absolute; cursor: pointer; opacity: 1;
+}
+.shawVideo_drawer .disabled.shawVideo_drawer_btn {
+	transition:opacity 0.5s; cursor: default; opacity: 0.3;
+}
+@media all and (min-width:35em)
+{
+.shawVideo_drawer .shawVideo_drawer_btn {
+	background: none; padding: 0.5em 0.2em; top: 0.5em; font-size: 2.5em; font-weight: bolder;
+}
+}
+.shawVideo_ie8 .shawVideo_drawer .shawVideo_drawer_btn {
+	background: none; padding: 0.5em 0.2em; top: 0.5em; font-size: 2.5em; font-weight: bolder;
+}
+.shawVideo_drawer .shawVideo_drawer_prev {
+	left: -3.5%;
+}
+.shawVideo_drawer .shawVideo_drawer_next {
+	right: -3.5%;
+}
+.shawVideo_drawer .shawVideo_drawerList_wrapper {
+	width: 100%; overflow: hidden; -ms-overflow-style: none;
+}
+.shawVideo_drawer .shawVideo_drawerList {
+	margin: 0px; padding: 0px; height: 14.75em; list-style-type: none; position: relative;
+}
+.shawVideo_drawer .shawVideo_drawerList::before {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_drawer .shawVideo_drawerList::after {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.shawVideo_drawer .shawVideo_drawerList::after {
+	clear: both;
+}
+@media all and (min-width:35em)
+{
+.shawVideo_drawer .shawVideo_drawerList {
+	height: 15.5em;
+}
+}
+.shawVideo_ie8 .shawVideo_drawer .shawVideo_drawerList {
+	height: 15.5em;
+}
+.shawVideo_drawer .shawVideo_drawerItem {
+	margin: 0px 19px 0px 0px; width: 100%; float: left; display: block; position: relative; max-width: 225px; opacity: 0;
+}
+.shawVideo_drawer .shawVideo_hidden.shawVideo_drawerItem {
+	height: 0px; overflow: hidden; opacity: 0.75;
+}
+.shawVideo_drawer .shawVideo_drawerItem > a {
+	font-size: 1em; text-decoration: none; display: block;
+}
+.shawVideo_drawer .shawVideo_drawerItem_img {
+	border: 0px currentColor; border-image: none; width: 100%; height: 126px; max-width: 225px;
+}
+.shawVideo_drawer .shawVideo_videoThumb_error .shawVideo_ThumbnailLink {
+	border: 0px currentColor; border-image: none; width: 100%; height: 126px; max-width: 225px;
+}
+.shawVideo_drawer .shawVideo_drawerItem_img {
+	background-color: rgb(228, 228, 228);
+}
+.shawVideo_drawer .shawVideo_nowPlaying.shawVideo_drawerItem a {
+	position: relative;
+}
+.shawVideo_drawer .shawVideo_placeholder.shawVideo_drawerItem {
+	width: 100%; max-width: 225px; opacity: 1; transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0);
+}
+.shawVideo_drawer .shawVideo_placeholder.shawVideo_drawerItem .shawVideo_placeholder_title {
+	margin: 0.7em 0px 1em; width: 90%;
+}
+.shawVideo_drawer .shawVideo_placeholder.shawVideo_drawerItem .shawVideo_placeholder_text {
+	margin: 0.5em 0px 0px; width: 78%;
+}
+.shawVideo_drawer a.shawVideo_ThumbnailLink {
+	height: 126px; line-height: 0; margin-bottom: 0.5em; position: relative;
+}
+.shawVideo_drawer .shawVideo_drawerItem_showName {
+	display: block;
+}
+.shawVideo_drawer .shawVideo_drawerItem_daysLeft {
+	background: rgba(0, 0, 0, 0.7); padding: 0.2em 0.5em; left: 0.5em; top: 0.5em; color: white; text-transform: uppercase; font-size: 0.87em; font-weight: bold; position: absolute;
+}
+.shawVideo_drawer .shawVideo_drawerItem_daysLeft::before {
+	font-weight: normal; margin-right: 5px; content: "expires in";
+}
+.shawVideo_drawer .is-hidden.shawVideo_drawerItem_showName {
+	display: none;
+}
+.shawVideo_drawer .shawVideo_drawerItem_episodeName {
+	display: block;
+}
+.shawVideo_showPage.shawVideo_drawer .shawVideo_drawerItem_episodeName {
+	line-height: 1em; font-size: 1.12em; margin-bottom: 0.2em;
+}
+@media all and (min-width:35em)
+{
+.shawVideo_showPage.shawVideo_drawer .shawVideo_drawerItem_episodeName {
+	font-size: 1.25em;
+}
+}
+.shawVideo_ie8 .shawVideo_showPage.shawVideo_drawer .shawVideo_drawerItem_episodeName {
+	font-size: 1.25em;
+}
+.shawVideo_drawer .shawVideo_drawerItem_episode {
+	line-height: 1.25em; font-size: 1em;
+}
+.shawVideo_drawer .shawVideo_drawerItem_airdate {
+	line-height: 1.25em; font-size: 1em;
+}
+.shawVideo_drawer .shawVideo_drawerItem_season {
+	line-height: 1.25em; font-size: 1em;
+}
+@media all and (min-width:35em)
+{
+.shawVideo_drawer .shawVideo_drawerItem_episode {
+	font-size: 1.1em;
+}
+.shawVideo_drawer .shawVideo_drawerItem_airdate {
+	font-size: 1.1em;
+}
+.shawVideo_drawer .shawVideo_drawerItem_season {
+	font-size: 1.1em;
+}
+}
+.shawVideo_ie8 .shawVideo_drawer .shawVideo_drawerItem_episode {
+	font-size: 1.1em;
+}
+.shawVideo_ie8 .shawVideo_drawer .shawVideo_drawerItem_airdate {
+	font-size: 1.1em;
+}
+.shawVideo_ie8 .shawVideo_drawer .shawVideo_drawerItem_season {
+	font-size: 1.1em;
+}
+.shawVideo_drawer .shawVideo_drawerItem_season::before {
+	margin-right: 4px; content: "Season";
+}
+.shawVideo_drawer .shawVideo_drawerItem_episode::before {
+	margin: 0px 4px; content: "Episode";
+}
+.shawVideo_drawer .shawVideo_drawerItem_airdate {
+	letter-spacing: 0px; font-size: 1em; display: block;
+}
+.shawVideo_drawer .shaw_drawerItem_longForm .shawVideo_drawerItem_airdate::before {
+	margin-right: 4px; content: "Aired:";
+}
+.shawVideo_drawer .shaw_drawerItem_shortForm .shawVideo_drawerItem_airdate::before {
+	margin-right: 4px; content: "Posted:";
+}
+.shawVideo_drawer .shawVideo_drawerItem_season::before {
+	margin-right: 4px; content: "Season";
+}
+.shawVideo_drawer .shawVideo_drawerItem_episode::before {
+	margin: 0px 4px; content: "Episode";
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_season {
+	font-size: 0.75em; margin-right: 5px; display: inline-block;
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_episode {
+	font-size: 0.75em; margin-right: 5px; display: inline-block;
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_airdate {
+	font-size: 0.75em; margin-right: 5px; display: inline-block;
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_duration {
+	font-size: 0.75em; margin-right: 5px; display: inline-block;
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_airdate {
+	text-transform: uppercase;
+}
+.shawVideo_drawer .shaw_drawerItem_longForm.shawVideo_drawerItem--compact .shawVideo_drawerItem_airdate {
+	padding-left: 5px; border-left-color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid;
+}
+.shawVideo_drawer .shaw_drawerItem_shortForm.shawVideo_drawerItem--compact .shawVideo_drawerItem_airdate {
+	padding-left: 5px; border-left-color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid;
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_duration {
+	padding-left: 5px; border-left-color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid;
+}
+.shawVideo_drawer .shaw_drawerItem_longForm.shawVideo_drawerItem--compact .shawVideo_drawerItem_airdate::before {
+	margin-right: 4px; content: "Aired";
+}
+.shawVideo_drawer .shaw_drawerItem_shortForm.shawVideo_drawerItem--compact .shawVideo_drawerItem_airdate::before {
+	margin-right: 4px; content: "Posted";
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_season::before {
+	margin: 0px; content: "S";
+}
+.shawVideo_drawer .shawVideo_drawerItem--compact .shawVideo_drawerItem_episode::before {
+	margin: 0px; content: "E";
+}
+.shawVideo_drawer .shawVideo_drawerItem-displayShowName--true.shawVideo_drawerItem--compact .shawVideo_drawerItem_episodeName {
+	width: 225px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.shawVideo_drawer .shawVideo_drawerItem-displayShowName--false.shawVideo_drawerItem--compact .shawVideo_drawerItem_episodeName {
+	height: 2.1em;
+}
+.shawVideo_drawer .shawVideo_drawer_seeMoreCard {
+	background: rgb(239, 239, 239); border: 1px solid rgb(207, 207, 207); border-image: none; height: 125px; text-align: center; text-transform: uppercase; line-height: 125px; font-size: 1.87em; opacity: 1;
+}
+.shawVideo_showPage.shawVideo_drawer .shawVideo_drawer_seeMoreCard {
+	height: 125px !important;
+}
+.shawVideo_drawer .shawVideo_drawer_seeMoreCard > a {
+	color: rgb(0, 0, 0); position: relative;
+}
+.shawVideo_drawer .shawVideo_drawer_seeMoreCard > a:hover {
+	color: rgb(0, 0, 0) !important;
+}
+.shawVideo_drawer .shawVideo_drawer_seeMoreCard > a::after {
+	top: -0.1em; right: 1.15em; color: rgb(187, 10, 12); position: absolute; content: "\bb";
+}
+.shawVideo_touch .shawVideo_drawer .shawVideo_drawerList_wrapper {
+	-ms-overflow-y: hidden;
+}
+.shawVideo_touch .shawVideo_drawer .isScrollable.shawVideo_drawerList_wrapper {
+	-ms-overflow-x: scroll; -webkit-overflow-scrolling: touch;
+}
+.shawVideo_touch .shawVideo_drawer .shawVideo_drawerList {
+	-webkit-transform: translateZ(0);
+}
+.shawVideo_touch .shawVideo_drawer .shawVideo_drawer_btn {
+	display: none !important;
+}
+@media all and (min-width:54em)
+{
+.shawVideo_touch .shawVideo_drawer .shawVideo_drawer_btn {
+	display: block !important;
+}
+}
+.shawVideo_ie8 .shawVideo_touch .shawVideo_drawer .shawVideo_drawer_btn {
+	display: block !important;
+}
+.shawVideo_touch .shawVideo_drawer .disabledAndHide.shawVideo_drawer_btn {
+	display: none !important;
+}
+.shawVideo_hiatusMessage {
+	margin: 0px auto; max-width: 1200px;
+}
+.shawVideo_hiatusMessage p {
+	color: rgb(0, 0, 0);
+}
+body:not(.shawVideo_html5) .shawVideo_drawerItem {
+	transform: translate3d(0px, 10px, 0px); -webkit-transform: translate3d(0, 10px, 0); -moz-transform: translate3d(0, 10px, 0); -o-transform: translate3d(0, 10px, 0);
+}
+body .fadeIn.shawVideo_drawerItem {
+	transition:opacity 0.5s ease-out, transform 0.5s ease-out; opacity: 1; transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out; -moz-transition: opacity 0.5s ease-out, -moz-transform 0.5s ease-out; -o-transition: opacity 0.5s ease-out, -o-transform 0.5s ease-out;
+}
+.shawVideo_html5 [data-html5status='true'].fadeIn.shawVideo_drawerItem-showMixedContent--true {
+	opacity: 1;
+}
+.shawVideo_html5 [data-html5status='false'].fadeIn {
+	opacity: 0.5;
+}
+:not(.shawVideo_html5).shawVideo_noFlash [data-html5status='true'].fadeIn.shawVideo_drawerItem-showMixedContent--false {
+	opacity: 0.5;
+}
+:not(.shawVideo_html5).shawVideo_noFlash [data-html5status='false'].fadeIn.shawVideo_drawerItem-showMixedContent--false {
+	opacity: 0.5;
+}
+:not(.shawVideo_html5).shawVideo_noFlash [data-html5status='false'].fadeIn.shawVideo_drawerItem-showMixedContent--true {
+	opacity: 0.5;
+}
+#shawVideo_playbackContainer {
+	margin: 1.25em auto; width: 100%; position: relative; max-width: 1280px;
+}
+#shawVideo_PlayerFrame {
+	width: 100%;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_PlayerFrame {
+	padding-right: 350px;
+}
+}
+.shawVideo_ie8 #shawVideo_PlayerFrame {
+	padding-right: 350px;
+}
+#shawVideo_PlaybackArea {
+	margin: 1.25em auto; position: relative;
+}
+#shawVideo_PlaybackArea::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+#shawVideo_VideoAds {
+	margin: 10px auto 0px; width: 108%; overflow: hidden; position: relative; max-width: 320px;
+}
+@media all and (max-width:22em) and (min-width:0px)
+{
+#shawVideo_VideoAds {
+	margin-left: -4%;
+}
+}
+@media all and (min-width:25em)
+{
+#shawVideo_VideoAds {
+	width: 330px; max-width: none;
+}
+}
+.shawVideo_ie8 #shawVideo_VideoAds {
+	width: 330px; max-width: none;
+}
+@media all and (min-width:48em)
+{
+#shawVideo_VideoAds {
+	padding-bottom: 2em; margin-top: 1em; float: right;
+}
+}
+.shawVideo_ie8 #shawVideo_VideoAds {
+	padding-bottom: 2em; margin-top: 1em; float: right;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_VideoAds {
+	top: 0px; right: 0px; margin-top: 0px; float: none; position: absolute;
+}
+}
+.shawVideo_ie8 #shawVideo_VideoAds {
+	top: 0px; right: 0px; margin-top: 0px; float: none; position: absolute;
+}
+#shawVideo_VideoAds .shawVideo_videoAd {
+	margin: 0px auto; text-align: center;
+}
+#shawVideo_PlayerContainer {
+	height: 0px; padding-top: 60px; padding-bottom: 56.25%; position: relative; background-color: rgb(0, 0, 0);
+}
+.shawVideo_Html5Fallback#shawVideo_PlayerContainer {
+	padding: 0px; height: auto;
+}
+.fullScreenMode.svpContainer {
+	z-index: 10000;
+}
+#shawVideo_FlashPlayer {
+	left: 0px; top: 0px; width: 100%; height: 100%; position: absolute;
+}
+#shawVideo_metaExpand {
+	background: rgb(66, 66, 66); margin: 1.2em auto 0px; padding: 0.75em 0.8em; width: 10em; text-transform: uppercase; line-height: 1.2em; font-size: 0.9em; display: block; position: relative; cursor: pointer;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_metaExpand {
+	margin-top: -1.5em;
+}
+}
+.shawVideo_ie8 #shawVideo_metaExpand {
+	margin-top: -1.5em;
+}
+#shawVideo_metaExpand::before {
+	background: none; top: 1.8em; right: 1.25em; line-height: 0; font-family: videodrome; font-size: 0.75em; display: block; position: absolute;
+}
+#shawVideo_expandedDetails {
+	border-top-color: rgb(66, 66, 66); border-top-width: 1px; border-top-style: solid;
+}
+.showDetails#shawVideo_expandedDetails {
+	transition:max-height 0.5s, padding-top 0.25s; padding-top: 1.5em; max-height: 1000px;
+}
+.showDetails#shawVideo_expandedDetails > * {
+	transition:opacity 0.5s; opacity: 1;
+}
+.hideDetails#shawVideo_expandedDetails {
+	transition:max-height 0.25s, padding-top 0.5s; overflow: hidden; padding-top: 0px; max-height: 0px;
+}
+.hideDetails#shawVideo_expandedDetails > * {
+	transition:opacity 0.5s; opacity: 0;
+}
+#shawVideo_videoMetaArea {
+	margin: 1em 0px; width: 100%; display: none; position: relative;
+}
+@media all and (min-width:48em)
+{
+#shawVideo_videoMetaArea {
+	width: 50%; float: left;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaArea {
+	width: 50%; float: left;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_videoMetaArea {
+	width: 100%; float: none;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaArea {
+	width: 100%; float: none;
+}
+#shawVideo_videoMetaData #shawVideo_metaClipName {
+	margin: 0px 0px 0.3em; line-height: 1.15em; letter-spacing: -0.5px; font-size: 1.62em;
+}
+@media all and (min-width:25em)
+{
+#shawVideo_videoMetaData #shawVideo_metaClipName {
+	margin: 0px 0px 0.15em; line-height: 1.11em; font-size: 2.5em;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaData #shawVideo_metaClipName {
+	margin: 0px 0px 0.15em; line-height: 1.11em; font-size: 2.5em;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_videoMetaData #shawVideo_metaClipName {
+	padding-right: 350px;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaData #shawVideo_metaClipName {
+	padding-right: 350px;
+}
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo {
+	line-height: 1.42em; font-size: 0.87em; font-weight: normal; margin-top: 0px; margin-bottom: 0.5em;
+}
+@media all and (min-width:25em)
+{
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo {
+	line-height: 1.44em; font-size: 1.3em;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaData #shawVideo_metaSeasonInfo {
+	line-height: 1.44em; font-size: 1.3em;
+}
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo span {
+	margin: 0px 0px 0px 0.63em; padding: 0px 0px 0px 0.63em; border-left-color: rgb(200, 200, 200); border-left-width: 1px; border-left-style: solid;
+}
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo span:empty {
+	margin: 0px; padding: 0px; border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo span:first-child {
+	margin: 0px; padding: 0px; border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo span#shawVideo_metaRating {
+	text-transform: uppercase;
+}
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo #shawVideo_metaFirstAired {
+	margin: 0px; padding: 0px; border-left-color: currentColor; border-left-width: medium; border-left-style: none; display: block;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_videoMetaData #shawVideo_metaSeasonInfo #shawVideo_metaFirstAired {
+	margin: 0px 0px 0px 0.63em; padding: 0px 0px 0px 0.63em; border-left-color: rgb(200, 200, 200); border-left-width: 1px; border-left-style: solid; display: inline;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaData #shawVideo_metaSeasonInfo #shawVideo_metaFirstAired {
+	margin: 0px 0px 0px 0.63em; padding: 0px 0px 0px 0.63em; border-left-color: rgb(200, 200, 200); border-left-width: 1px; border-left-style: solid; display: inline;
+}
+#shawVideo_metaSeasonInfo #shawVideo_metaFirstAired::before {
+	content: "Aired: ";
+}
+#shawVideo_videoMetaData #shawVideo_episodeDescription {
+	margin: 0px 0px 0.75em; font-size: 1em; font-weight: normal;
+}
+@media all and (min-width:25em)
+{
+#shawVideo_videoMetaData #shawVideo_episodeDescription {
+	font-size: 1.4em;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaData #shawVideo_episodeDescription {
+	font-size: 1.4em;
+}
+#shawVideo_videoMetaData #shawVideo_metaAuthDates {
+	margin: 0px; line-height: 1em; font-size: 0.75em;
+}
+@media all and (min-width:25em)
+{
+#shawVideo_videoMetaData #shawVideo_metaAuthDates {
+	line-height: 1.2em; font-size: 1em;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaData #shawVideo_metaAuthDates {
+	line-height: 1.2em; font-size: 1em;
+}
+#shawVideo_videoMetaData #shawVideo_metaAuthDates em {
+	font-style: normal; margin-bottom: 0.2em;
+}
+@media all and (min-width:25em)
+{
+#shawVideo_videoMetaData #shawVideo_metaAuthDates em {
+	margin-bottom: 0px;
+}
+}
+.shawVideo_ie8 #shawVideo_videoMetaData #shawVideo_metaAuthDates em {
+	margin-bottom: 0px;
+}
+#shawVideo_metaAuthDates span {
+	margin-bottom: 5px; display: block;
+}
+#shawVideo_videoMetaData #shawVideo_socialTools ul {
+	list-style: none; margin: 5px 0px; padding: 0px; float: left;
+}
+#shawVideo_videoMetaData #shawVideo_socialTools ul li {
+	width: 1.8em; height: 1.8em; text-align: center; line-height: 1.7em; font-size: 1.75em; margin-right: 0.35em; float: left;
+}
+#shawVideo_videoMetaData #shawVideo_socialTools ul li a {
+	text-indent: -3000px; display: block;
+}
+#shawVideo_videoMetaData #shawVideo_socialTools ul li:hover {
+	transition:background 0.5s, color 0.3s; cursor: pointer;
+}
+#shawVideo_videoMetaData #shawVideo_socialTools ul li.shawVideoIcon-email_icon {
+	display: none;
+}
+#shawVideo_videoMetaArea::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+#shawVideo_videoMetaData #shawVideo_socialTools::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+#shawVideo_noFlashMessage {
+	padding: 0px 5%; left: 0px; top: 0px; width: 100%; height: 100%; text-align: center; color: rgb(255, 255, 255); font-size: 0.8em; position: absolute;
+}
+@media all and (min-width:25em)
+{
+#shawVideo_noFlashMessage {
+	font-size: 1em;
+}
+}
+.shawVideo_ie8 #shawVideo_noFlashMessage {
+	font-size: 1em;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_noFlashMessage {
+	font-size: 1.4em;
+}
+}
+.shawVideo_ie8 #shawVideo_noFlashMessage {
+	font-size: 1.4em;
+}
+#shawVideo_noFlashMessage h3 {
+	margin: 0px; padding-top: 13%; font-size: 1.17em; font-weight: bold;
+}
+@media all and (min-width:60em)
+{
+#shawVideo_noFlashMessage h3 {
+	padding-top: 18.5%;
+}
+}
+.shawVideo_ie8 #shawVideo_noFlashMessage h3 {
+	padding-top: 18.5%;
+}
+#shawVideo_noFlashMessage p {
+	font-size: 1em;
+}
+#shawVideo_noFlashMessage a {
+	font-size: 1em;
+}
+#shawVideo_noFlashMessage a {
+	color: rgb(253, 168, 12);
+}
+.brandTitleBar .brand {
+	display: none;
+}
+#shawVideo_betaMessaging {
+	padding-top: 1.25em; margin-top: 1.55em; border-top-color: rgb(62, 62, 62); border-top-width: 1px; border-top-style: solid;
+}
+#shawVideo_betaMessaging h3 {
+	margin: 0px 0px 0.25em; color: rgb(254, 254, 254); font-size: 1.7em;
+}
+#shawVideo_betaMessaging p {
+	margin: 0px 0px 0.75em; font-size: 0.95em;
+}
+#shawVideo_betaMessaging .shawVideo_survey {
+	background: rgb(253, 202, 54); padding: 0.8em 1.5em; width: 13.1em; text-transform: uppercase; line-height: 1em; display: block; position: relative;
+}
+#shawVideo_betaMessaging .shawVideo_survey:hover {
+	color: rgb(16, 16, 16) !important;
+}
+#shawVideo_betaMessaging .shawVideo_survey::after {
+	font-size: 1.3em; margin-top: -0.1em; margin-left: 0.5em; position: absolute; content: "\bb";
+}
+#shawVideo_betaMessaging #shawVideo_preview {
+	padding-right: 8px; margin-right: 5px; position: relative;
+}
+#shawVideo_betaMessaging #shawVideo_preview::after {
+	background: rgb(255, 255, 255); top: 7px; width: 1px; height: 9px; right: 0px; position: absolute; content: "";
+}
+#shawVideo_betaMessaging .shawVideoPreviewLinks {
+	font-size: 0.9em; text-decoration: underline; margin-top: 2em; display: inline-block; cursor: pointer;
+}
+#feedbackFormGroup {
+	top: 0px; width: 100%; height: 100%; display: none; position: fixed; opacity: 1;
+}
+.fadeOut#feedbackFormGroup {
+	transition:opacity 0.5s ease-out; opacity: 0; -webkit-transition: opacity 0.5s ease-out; -moz-transition: opacity 0.5s ease-out; -o-transition: opacity 0.5s ease-out;
+}
+#feedbackFormGroup #feedback_input {
+	padding: 0px 5%;
+}
+#feedbackFormGroup .feedbackForm-text {
+	color: rgb(121, 121, 121);
+}
+#feedbackFormGroup .feedbackForm-title {
+	margin: 0.67em 0px; font-size: 2em;
+}
+@media all and (max-width:752px)
+{
+#feedbackFormGroup .firstName {
+	margin-bottom: 20px;
+}
+}
+#feedbackFormGroup .bk {
+	top: 0px; width: 100%; height: 100%; display: block; position: absolute; background-color: rgba(0, 0, 0, 0.8);
+}
+#feedbackFormGroup .feedback-footer {
+	text-align: right; margin-top: 1em;
+}
+#feedbackFormGroup .feedback-btn {
+	border: currentColor; transition:background-color 0.5s; border-image: none; color: rgb(255, 255, 255); font-family: Montserrat, sans-serif; background-color: rgb(71, 71, 71);
+}
+#feedbackFormGroup .feedback-btn:hover {
+	transition:background-color 0.5s; background-color: rgb(0, 0, 0);
+}
+#feedbackFormGroup .feedback-fieldset {
+	margin: 0px; padding: 0px; border: currentColor; transition:opacity 0.5s; border-image: none; opacity: 1;
+}
+#feedbackFormGroup :disabled.feedback-fieldset {
+	opacity: 0.5;
+}
+#feedbackFormGroup .feedback-submit {
+	padding: 0.6em 2.5em; border: currentColor; border-image: none; font-weight: bold; margin-left: 1em;
+}
+#feedbackFormGroup .feedback-cancel {
+	font-weight: bold; text-decoration: underline; cursor: pointer;
+}
+#feedbackFormGroup .feedback-submit {
+	font-size: 0.75em;
+}
+#feedbackFormGroup .feedback-cancel {
+	font-size: 0.75em;
+}
+@media all and (min-width:25em)
+{
+#feedbackFormGroup .feedback-submit {
+	font-size: 1em;
+}
+#feedbackFormGroup .feedback-cancel {
+	font-size: 1em;
+}
+}
+#feedbackFormGroup .feedback-close {
+	margin: 0px auto; padding: 0.6em 4.5em; display: block;
+}
+#feedbackFormGroup .close {
+	padding: 0px 33px 0px 12px; top: 0px; text-align: center; right: 0px; color: rgb(255, 255, 255); line-height: 2.15em; font-size: 1em; font-weight: normal; display: block; position: absolute; opacity: 1; text-shadow: none;
+}
+#feedbackFormGroup .close::after {
+	top: 1px; right: 9px; font-size: 2em; font-weight: bold; position: absolute; content: "\00d7";
+}
+#feedbackFormGroup #feedbackFormPanel {
+	margin: 0px; padding: 30px; border: 2px solid black; transition:opacity 0.5s ease-out, transform 0.5s ease-out; border-image: none; width: 100%; display: block; position: relative; opacity: 0; transform: translate3d(0px, 10px, 0px); background-color: rgb(255, 255, 255); -webkit-transform: translate3d(0, 10px, 0); -moz-transform: translate3d(0, 10px, 0); -o-transform: translate3d(0, 10px, 0); -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out; -moz-transition: opacity 0.5s ease-out, -moz-transform 0.5s ease-out; -o-transition: opacity 0.5s ease-out, -o-transform 0.5s ease-out;
+}
+#feedbackFormGroup .fadeIn#feedbackFormPanel {
+	opacity: 1; transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0);
+}
+@media all and (min-width:54em)
+{
+#feedbackFormGroup #feedbackFormPanel {
+	margin: 100px 20% 0px; width: 60%;
+}
+}
+.shawVideo_ie8 #feedbackFormGroup #feedbackFormPanel {
+	margin: 100px 20% 0px; width: 60%;
+}
+#feedbackFormGroup #feedbackFormPanel .link--primary {
+	font-weight: 600;
+}
+#feedbackFormGroup #feedbackFormPanel form {
+	margin: 0px auto;
+}
+#feedbackFormGroup #feedbackFormPanel form .row {
+	margin-bottom: 20px;
+}
+#feedbackFormGroup #feedbackFormPanel form input {
+	width: 100%; resize: vertical;
+}
+#feedbackFormGroup #feedbackFormPanel form select {
+	width: 100%; resize: vertical;
+}
+#feedbackFormGroup #feedbackFormPanel form textarea {
+	width: 100%; resize: vertical;
+}
+#feedbackFormGroup #feedbackFormPanel form textarea {
+	min-height: 100px;
+}
+#feedbackFormGroup #feedbackFormPanel form .ng-dirty.ng-invalid {
+	background: rgb(255, 182, 193);
+}
+#feedbackFormGroup #feedbackFormPanel form label {
+	display: block;
+}
+#feedbackFormGroup #feedbackFormPanel form button:disabled {
+	opacity: 0.25;
+}
+#feedbackFormGroup #feedbackFormPanel form button:disabled:hover {
+	background-color: rgb(71, 71, 71);
+}

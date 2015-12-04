@@ -1,0 +1,286 @@
+﻿
+* {
+    /*-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+        box-sizing: border-box;*/
+    }
+
+body {display:block;}
+
+.container {
+    min-width:970px; 
+    max-width:1400px; 
+    margin:auto; 
+    position:relative;
+    padding:0 5%; 
+   margin-bottom:20px;
+
+}
+#hero {}
+#hero .primary-content {
+  padding-bottom: 20px;
+  max-width:1200px;
+}
+ 
+ 
+.hero-masonry {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 1%;
+  margin-bottom: 20px;
+}
+
+
+.hero-masonry:before,
+.hero-masonry:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.hero-masonry .grid-sizer {
+position: absolute;
+}
+
+
+
+.hero-item {
+  width: 22%; /* juse a lil under  47 */
+  margin: 10px 1%;
+  float: right;
+  border-radius: 8px;
+  border-radius: 10px 10px 8px 8px;
+  border:1px solid gray;
+}
+
+
+
+.hero-item.texty {
+  background: #D8D6D2;
+  padding: 10px;
+}
+
+ 
+.hero-item  img {
+  display: block;
+  max-width: 100%;
+  
+}
+
+ .item  {
+    float: left;
+ 
+}
+  
+.item  img {
+    display: block;
+    max-width: 100%;
+    min-width:100%;
+    min-height:59px;
+    border: 1px solid gray;
+  
+}
+.item.w2 {
+    width: 23%;  
+    margin: 8px 8px;
+}
+ 
+
+
+/* iPhone, etc portrait ---- */
+@media only screen and (min-width: 320px) {
+   .primary-content
+    {
+        margin-left: 3%;
+    }
+    .header
+    {
+     padding:1px 0px 5px 1px;
+     font-size:10px;
+    }
+	 
+}
+
+/* iPhone, etc landscape ---- */
+@media only screen and (min-width: 480px) {
+     .primary-content {
+      margin-left: 3%;
+  }
+     .header
+    {
+         padding:5px 0px 5px 15px;
+         font-size:13px;
+         font-family:'Arial Black', Gadget, sans-serif 
+    }
+}
+ 
+
+
+/* iPad, tablets etc portrait ---- */
+@media only screen and (min-width: 768px)
+{
+   .primary-content {
+    margin-left: 4%;
+  }
+    .header
+    {
+         font-size:16px;  
+    }
+}
+/* desktop */
+@media screen and ( min-width: 960px ) {
+  .primary-content {
+    margin-left: 4%;
+  }
+}
+
+@media screen and ( min-width: 1000px ) {
+  .primary-content {
+    margin-left: 6%;
+  }
+}
+/* Laptops, Desktops, etc ---- */
+@media only screen and (min-width: 1024px) {
+
+	.primary-content {
+    margin-left: 6.5%;
+  }
+
+}
+
+
+@media only screen and (min-width: 1100px) {
+
+	.primary-content {
+    margin-left: 4%;
+  }
+    .header
+{
+     padding:5px 0px 5px 15px;
+     font-size:16px;
+     font-family:'Arial Black', Gadget, sans-serif 
+}
+}
+
+@media only screen and (min-width: 1150px) {
+
+	.primary-content {
+    margin-left: 3.5%;
+  }
+ 
+}
+@media only screen and (min-width: 1200px) {
+
+	.primary-content {
+    margin-left: 4.5%;
+  }
+ 
+}
+
+@media only screen and (min-width: 1250px)
+{
+
+    .primary-content
+    {
+        margin-left: 4.5%;
+    }
+}
+@media only screen and (min-width: 1300px)
+{
+
+    .primary-content
+    {
+        margin-left: 5%;
+    }
+}
+@media only screen and (min-width: 1350px)
+{
+
+    .primary-content
+    {
+        margin-left: 5%;
+    }
+}
+@media only screen and (min-width: 1400px)
+{
+
+    .primary-content
+    {
+        margin-left: 10%;
+    }
+}
+@media only screen and (min-width: 1450px)
+{
+
+    .primary-content
+    {
+        margin-left: 11%;
+    }
+}
+@media only screen and (min-width: 1500px)
+{
+
+    .primary-content
+    {
+        margin-left: 12%;
+    }
+}
+@media only screen and (min-width: 1550px)
+{
+
+    .primary-content
+    {
+        margin-left: 14%;
+    }
+}
+@media only screen and (min-width: 1600px)
+{
+
+    .primary-content
+    {
+        margin-left: 15%;
+    }
+}
+@media only screen and (min-width: 1650px)
+{
+
+    .primary-content
+    {
+        margin-left: 15%;
+    }
+}
+@media only screen and (min-width: 1700px)
+{
+
+    .primary-content
+    {
+        margin-left: 16%;
+    }
+}
+                                    
+@media only screen and (min-width: 1750px)
+{
+
+    .primary-content
+    {
+        margin-left: 16.5%;
+    }
+}
+
+@media only screen and (min-width: 1800px)
+{
+
+    .primary-content
+    {
+        margin-left: 17%;
+    }
+}
+
+@media only screen and (min-width: 1900px)
+{
+
+    .primary-content
+    {
+        margin-left: 18.5%;
+    }
+}

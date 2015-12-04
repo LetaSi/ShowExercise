@@ -1,0 +1,339 @@
+.allShows {
+	padding-top: 50px;
+}
+.allShows [class*='col-'] {
+	padding: 0px 5px;
+}
+.allShows .row {
+	margin-right: -5px; margin-left: -5px;
+}
+.allShows h2 {
+	margin-bottom: 25px;
+}
+.allShows :nth-of-type(2n+1).allShows-show {
+	clear: left;
+}
+.allShows .is-visible.allShows-show {
+	clear: none; float: left;
+}
+.allShows .firts-in-line.is-visible.allShows-show {
+	clear: left;
+}
+.filters-applied.allShows .desktop_bigbox {
+	display: none !important;
+}
+.filters-applied.allShows .phone_bigbox {
+	display: none !important;
+}
+.filters-applied.allShows .tablet_bigbox {
+	display: none !important;
+}
+.allShows .allShows-show .allShows-showTitle {
+	margin: 1em 0px; color: rgb(51, 51, 51); line-height: 15px; letter-spacing: -0.5px; font-family: "proxima-nova-n4", "proxima-nova", sans-serif; font-size: 16px; font-style: normal; font-weight: 400;
+}
+.link--hasImage > .allShows .allShows-show .allShows-showTitle {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.allShows .allShows-show .allShows-showTitle .link--hasImage {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.link--navigation > .allShows .allShows-show .allShows-showTitle {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.allShows .allShows-show .allShows-showTitle .link--navigation {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.link--primary > .allShows .allShows-show .allShows-showTitle {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.allShows .allShows-show .allShows-showTitle .link--primary {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.link--primaryDarkBg > .allShows .allShows-show .allShows-showTitle {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.allShows .allShows-show .allShows-showTitle .link--primaryDarkBg {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.link--secondary > .allShows .allShows-show .allShows-showTitle {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.allShows .allShows-show .allShows-showTitle .link--secondary {
+	font-family: "Montserrat", sans-serif; font-size: inherit; font-style: normal; font-weight: 600;
+}
+.allShows .allShows-show img {
+	width: 100%; height: auto; max-width: 100%;
+}
+.allShows .allShows-show figure {
+	margin-bottom: 15px; position: relative;
+}
+.allShows .allShows-show .overlay {
+	left: 0px; width: 100%; bottom: 0px; display: none; position: absolute;
+}
+.allShows .allShows-show .overlay .show-link {
+	margin: 0px auto; width: 50%; text-align: center; bottom: 0px; color: rgb(255, 255, 255); line-height: 18px; padding-top: 47px; float: left; display: block;
+}
+.allShows .allShows-show .overlay .videoLink.show-link {
+	background: url("/content/images/video-icon.png") no-repeat center 15px rgba(0, 0, 0, 0.8);
+}
+.allShows .allShows-show .overlay .siteLink.show-link {
+	background: url("/content/images/showsite-icon.png") no-repeat center 15px rgba(0, 0, 0, 0.8);
+}
+.allShows .allShows-show .overlay .show-link:hover {
+	color: rgb(255, 255, 255); background-color: rgba(159, 5, 5, 0.75);
+}
+@media all and (min-width:0px)
+{
+.allShows .allShows-show .overlay .show-link {
+	height: 57px; text-indent: 100%; overflow: hidden;
+}
+}
+@media all and (min-width:480px)
+{
+.allShows .allShows-show .overlay .show-link {
+	height: 97px; text-indent: 0px;
+}
+}
+.allShows .allShows-show .overlay a.standalone {
+	width: 100%; float: none;
+}
+.allShows .phone_bigbox {
+	background: rgb(240, 240, 240); margin: 20px 0px 60px; padding: 40px 0px; width: 100%; clear: left; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+.allShows .tablet_bigbox {
+	background: rgb(240, 240, 240); margin: 20px 0px 60px; padding: 40px 0px; width: 100%; clear: left; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+.allShows .phone_bigbox {
+	padding-right: 15px; padding-left: 15px; margin-right: -15px; margin-left: -15px;
+}
+.allShows .tablet_bigbox {
+	padding-right: 10px; padding-left: 10px; margin-right: -10px; margin-left: -10px;
+}
+.allShows .bigbox-placeholder {
+	margin: 0px auto; left: -5px; width: 300px; position: relative; min-height: 250px;
+}
+.allShows .bigbox-placeholder::before {
+	margin: 0px auto; left: 0px; top: -15px; width: 100%; height: 15px; text-align: center; color: rgb(51, 51, 51); text-transform: uppercase; line-height: 15px; font-size: 12px; display: block; position: absolute; content: "Advertisement";
+}
+@media all and (min-width:480px)
+{
+.allShows .bigbox-placeholder {
+	left: 0px;
+}
+}
+.allShows .desktop_bigbox {
+	display: none;
+}
+.allShows .tablet_bigbox {
+	display: none;
+}
+.allShows .phone_bigbox {
+	display: block;
+}
+.show-link {
+	transition:0.2s; color: rgb(255, 255, 255); opacity: 1; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s;
+}
+.show-link:hover {
+	color: rgb(253, 197, 34);
+}
+.show-link:focus {
+	color: rgb(253, 197, 34);
+}
+.show-link:hover {
+	outline: 0px; text-decoration: none;
+}
+.show-link:focus {
+	outline: 0px; text-decoration: none;
+}
+.filter-alpha {
+	margin: 1em 0px 1.5em; padding: 0px; overflow: hidden; position: relative;
+}
+.filter-alpha li {
+	display: none;
+}
+.filter-alpha .filter-mobile {
+	margin: 0px 0.5em 0.5em 0px; float: left; display: block;
+}
+.filter-alpha .filter-link {
+	background: rgb(110, 109, 114); padding: 0.5em 0.75em; outline: 0px; transition:0.2s; text-align: center; color: rgb(255, 255, 255); font-size: 1em; text-decoration: none; display: block; opacity: 1; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s;
+}
+.filter-alpha .filter-link:hover {
+	color: rgb(253, 197, 34);
+}
+.filter-alpha .filter-link:focus {
+	color: rgb(253, 197, 34);
+}
+.filter-alpha .filter-link:hover {
+	outline: 0px; text-decoration: none;
+}
+.filter-alpha .filter-link:focus {
+	outline: 0px; text-decoration: none;
+}
+.filter-alpha .filter-link:hover {
+	color: rgb(255, 255, 255);
+}
+.filter-alpha .filter-link:focus {
+	color: rgb(255, 255, 255);
+}
+.no-touch .filter-alpha .filter-link:hover {
+	background: rgb(0, 0, 0);
+}
+.no-touch .filter-alpha .filter-link:focus {
+	background: rgb(0, 0, 0);
+}
+.filter-alpha .active {
+	background: rgb(0, 0, 0);
+}
+.filter-alpha .active:focus {
+	background: rgb(0, 0, 0);
+}
+.filter-alpha .active {
+	color: rgb(253, 197, 34);
+}
+.filter-alpha .active:focus {
+	color: rgb(253, 197, 34);
+}
+.no-touch .filter-alpha .disabled:hover {
+	background: rgb(110, 109, 114); color: rgb(162, 162, 162); cursor: default;
+}
+.filter-alpha .disabled:hover {
+	background: rgb(110, 109, 114); color: rgb(162, 162, 162); cursor: default;
+}
+.no-touch .filter-alpha .disabled:focus {
+	background: rgb(110, 109, 114); color: rgb(162, 162, 162); cursor: default;
+}
+.filter-alpha .disabled:focus {
+	background: rgb(110, 109, 114); color: rgb(162, 162, 162); cursor: default;
+}
+.filter-alpha .disabled {
+	background: rgb(110, 109, 114); color: rgb(162, 162, 162); cursor: default;
+}
+@media screen and (-ms-high-contrast:active), all and (-ms-high-contrast:none)
+{
+.filter-alpha .num {
+	font-family: verdana, sans-serif; font-weight: 600;
+}
+}
+@media all and (min-width:752px)
+{
+.allShows [class*='col-'] {
+	padding: 0px 10px;
+}
+.allShows .row {
+	margin-right: -10px; margin-left: -10px;
+}
+.allShows :nth-of-type(2n+1).allShows-show {
+	clear: none; float: left;
+}
+.allShows :nth-of-type(3n+1).allShows-show {
+	clear: left;
+}
+.allShows .is-visible.allShows-show {
+	clear: none; float: left;
+}
+.allShows .firts-in-line.is-visible.allShows-show {
+	clear: left;
+}
+.allShows .desktop_bigbox {
+	display: none;
+}
+.allShows .phone_bigbox {
+	display: none;
+}
+.allShows .tablet_bigbox {
+	display: block;
+}
+.filter-alpha {
+	text-align: justify; margin-bottom: 1em;
+}
+.filter-alpha::after {
+	width: 100%; height: 0px; line-height: 0; display: inline-block; visibility: hidden; content: "";
+}
+.filter-alpha li {
+	display: none;
+}
+.filter-alpha .filter-mobile {
+	margin: 0px; width: 10%; float: none; display: inline-block;
+}
+.filter-alpha .filter-link {
+	padding: 0.5em 0px;
+}
+}
+@media all and (min-width:1280px)
+{
+.allShows h2 {
+	margin-bottom: 40px;
+}
+.allShows :nth-of-type(-n+3).allShows-show {
+	clear: none; float: left;
+}
+.allShows :nth-of-type(3n+1).allShows-show {
+	clear: none; float: left;
+}
+.allShows :nth-of-type(4n+4).allShows-show {
+	clear: left;
+}
+.allShows .is-visible.allShows-show {
+	clear: none; float: left;
+}
+.allShows .firts-in-line.is-visible.allShows-show {
+	clear: left;
+}
+.allShows .tablet_bigbox {
+	display: none;
+}
+.allShows .phone_bigbox {
+	display: none;
+}
+.allShows .desktop_bigbox {
+	padding: 0px 10px; width: 25%; height: 260px; margin-bottom: 20px; float: left; display: block;
+}
+.allShows .desktop_bigbox .bigbox-placeholder {
+	float: right;
+}
+.allShows .desktop_bigbox {
+	height: 280px; clear: none; float: left;
+}
+.allShows :nth-of-type(-n+3).allShows-show {
+	height: 280px; clear: none; float: left;
+}
+.filter-alpha {
+	background: rgb(110, 109, 114); padding: 0px 1%; transition:padding 0.3s; text-align: center; margin-bottom: 3.5em; -webkit-transition: padding 0.3s; -moz-transition: padding 0.3s; -o-transition: padding 0.3s;
+}
+.filter-alpha::before {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.filter-alpha::after {
+	height: 0px; overflow: hidden; display: block; content: ".";
+}
+.filter-alpha::after {
+	clear: both;
+}
+.filter-alpha::after {
+	display: none; content: none;
+}
+.active.filter-alpha {
+	padding-left: 4.7%;
+}
+.active.filter-alpha .filter-all {
+	left: 1%; width: 3.7%; opacity: 1;
+}
+.filter-alpha .filter-all {
+	transition:0.3s; left: -3.7%; top: 0px; width: 0px; overflow: hidden; position: absolute; opacity: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s;
+}
+.filter-alpha .filter-all .active {
+	background: none; color: rgb(255, 255, 255);
+}
+.filter-alpha li {
+	width: 3.7%; float: left; display: block;
+}
+.filter-alpha .filter-mobile {
+	width: 3.7%; float: left; display: block;
+}
+.filter-alpha .filter-range {
+	display: none;
+}
+.filter-alpha a {
+	background: none;
+}
+}

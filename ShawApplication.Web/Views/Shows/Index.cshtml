@@ -1,0 +1,150 @@
+﻿@model ShawApplication.Web.Models.ShowListViewModel
+@using ShawApplication.Web.Objects
+
+
+@{
+    ViewBag.Title = "All Shows";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class='container'>
+    <div class='content'>
+        <div class="container-fluid center-cont">
+            <h1 class="heading--primary">Shows</h1>
+            @RenderMasonryShowsFilter(Model.alphabets)
+        </div>
+    </div>
+</div>
+
+<div id="hero">
+    @RenderMasonryCreatives(Model.shows)
+</div>
+
+@helper RenderMasonryCreatives(List<Show> shows)
+{
+    <div class="primary-content">
+        <div class="hero-masonry">
+
+            @foreach (var item in shows)
+            {
+                <div id="@item.Id" data-type="@item.Name.Substring(0,1)" class="item w2" style="text-align:center">
+                    <a href="@item.ImageLink" target="_blank"> <img class="showImage" src="@MvcHtmlString.Create(item.ImageUrl)" /></a>
+                    <h3 class="allShows-showTitle"><a title="@item.Name - Visit Showpage" href="@item.VisitShowPageUrl" target="_blank" class="link--primary">@item.Name</a></h3>
+                </div>
+
+            }
+        </div>
+    </div>
+}
+
+<div id="overlay" class="transparent" style="position:absolute; text-align: center; color:black;  height:50px ; "></div>
+
+@helper RenderMasonryShowsFilter(List<Alphabet> alphabets)
+{
+    <ul id="filter" class="filter-alpha">
+        <li id="allFilter" class="filter-all filter-mobile"><a class="filter-link all" href="#" data-type="clear-filters">All</a></li>
+        <li class="filter-mobile"><a class="filter-link num" href="javascript:void(0);" data-type="#">#</a></li>
+        @foreach (var item in alphabets)
+        {
+            string style = (item.HasShow) ? "filter-link" : "disabled filter-link";
+            <li><a class="@style" data-type="@item.Alpha.ToLower()" href="#">@item.Alpha</a></li>
+        }
+        <li class="filter-mobile filter-range"><a class="filter-link" data-type="a b c d" href="#">A - D</a></li>
+        <li class="filter-mobile filter-range"><a class="filter-link" data-type="e f g h" href="#">E - H</a></li>
+        <li class="filter-mobile filter-range"><a class="filter-link" data-type="i j k l" href="#">I - L</a></li>
+        <li class="filter-mobile filter-range"><a class="filter-link" data-type="m n o p" href="#">M - P</a></li>
+        <li class="filter-mobile filter-range"><a class="filter-link" data-type="q r s t" href="#">Q - T</a></li>
+        <li class="filter-mobile filter-range"><a class="filter-link" data-type="v w" href="#">V - W</a></li>
+        <li class="filter-mobile filter-range"><a class="filter-link" data-type="x y z" href="#">X - Z</a></li>
+    </ul>
+}
+
+<script lang="ja" type="text/javascript">
+
+    var showList =@Html.Raw(Model.ShowsJson);
+
+    $(function () {
+
+        $("#filter li a").click(function(event) {
+            event.preventDefault();
+            if(!$(this).hasClass('disabled')){
+                //alert($(this).attr("data-type"));
+                var v = $(this).attr("data-type");
+                DispalyRangeShows(v);
+            }
+        });
+
+        $(document)
+              .on('mouseenter', 'div.item.w2', function (e) {
+                  var obj = $(this);
+                  var p = obj.position();
+                  var w = obj.width();
+                  var h= obj.height();
+                  var top = p.top + h - 100;
+                  setOverlayData(obj.attr('id'));
+                  $("#overlay").css({ "top": top, "left": p.left+8, "height" : "150px;", "width": w }).show();
+              })
+              .on('mouseleave', 'overlay', function () {
+                  $("#overlay").hide();
+              });
+    });
+
+    function  setOverlayData(showId){
+        var loop =showList.length;
+        $("#overlay").empty();
+        var html='<br/>';
+        for (var i = 0; i < loop; i++) {
+            if (showList[i].Id==showId){
+                if (showList[i].VisitShowPageUrl != ''){
+                    html+= "<a  target=\"_blank\" title=\""+showList[i].Name+"\" - Visit Showpage\" href=\""+showList[i].VisitShowPageUrl+"\" class=\"show-link siteLink\" target=\"\">Visit showpage</a>";
+                }
+                if (showList[i].WatchVideoUrl != ''){
+                    html+= "<a  target=\"_blank\" title=\""+showList[i].Name+"\" - Watch Video\" href=\""+showList[i].VisitShowPageUrl+"\" class=\"show-link videoLink\" target=\"\"> | Watch video</a>";
+                }
+                $("#overlay").html(html);
+            }
+        }
+    }
+    function ShowHideAllShows( flagShow) {
+        $("div.item.w2").each(function () {
+            if (!flagShow)
+                $(this).hide();
+            else
+                $(this).show();
+        });
+    }
+    function DispalyRangeShows(value) {
+        ShowHideAllShows(false);
+
+        var allfilter =$("#allFilter");
+
+        if (value != 'clear-filters'){
+            allfilter.removeClass("filter-all");
+        }else
+        {
+            allfilter.addClass("filter-all");
+        }
+        if (value == 'clear-filters'){
+            ShowHideAllShows(true);
+        }else{
+
+            var ranges = value.split(' ');
+            if (ranges[0]!='#'){
+                $("div.item.w2").each(function () {
+                    var v = $(this).attr('data-type').toLowerCase();
+                    if($.inArray(v,ranges) !=-1){
+                        $(this).show();
+                    }
+                });
+            }else{
+                ranges = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(',');
+                $("div.item.w2").each(function () {
+                    var v = $(this).attr('data-type').toUpperCase();
+                    if($.inArray(v,ranges) ==-1){
+                        $(this).show();
+                    }
+                });
+            }
+        }
+    }
+</script>

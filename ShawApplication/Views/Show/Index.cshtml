@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ShawApplication.API.Models.Show>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table width="70%" align="center">
+    <tr>
+        <td>
+            <h2>Show List</h2>
+
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <div>
+                @Html.ActionLink("Get list by (Json)", "Index2")
+            </div>
+            <div>
+                <br />
+                the following list populate using ActionResult and Api method
+            </div>
+        </td>
+    </tr>
+</table>
+<table width="70%" align="center">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table> 

@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index2";
+}
+
+
+<table width="70%" align="center">
+    <tr>
+        <td>
+            <h2>show list</h2>
+            Below list fetched by jquery from asp.net web API
+
+            <table width="100%" align="center" id="tbShow">
+                <tr style="background-color: #808080; color: white;">
+                    <td>id</td>
+                    <td>Name</td>
+                    <td>Description</td>
+
+                </tr>
+            </table>
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </td>
+    </tr>
+</table>
+<script>
+    $(function () {
+        $.ajax({
+            url: "http://localhost:64015/api/Client",
+            type: "Get",
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                var data = $.parseJSON(result);
+                for (var i = 0; i < data.length; i++) {
+                    $("<tr><td>" + data[i].Id + "</td><td>" + data[i].Name + "</td><td>" + data[i].Description + "</td></tr>").appendTo("#tbShow");
+                }
+            },
+            error: function (msg) { alert(msg); }
+        });
+    });
+</script>
+
+
